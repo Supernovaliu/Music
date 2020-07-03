@@ -1,0 +1,54 @@
+<!-- NG-ZORRO -->
+<div id="app">
+	<nz-layout class="layout">
+		<nz-header class="header">
+			<div class="wrap">
+				<div class="left">
+					<h1>music</h1>
+					<ul nz-menu nzTheme="dark" nzMode="horizontal">
+						<li nz-menu-item *ngFor="let item of menu" [routerLink]="item.path">{{item.label}}</li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="search">
+
+							<input type="text" nz-input placeholder="List/Singer/Song"/>
+
+
+					</div>
+					<div class="member">
+						<div class="no-login">
+							<ul nz-menu nzTheme="dark" naMode="horizontal">
+								<li nz-submenu>
+									<div title="">
+										<span>Sign In</span>
+										<i nz-icon type="down" nzTheme="outline"></i>
+									</div>
+									<ul>
+										<li nz-menu-item>
+											<i nz-icon type="mobile" nzTheme="outline"></i>
+											Mobile Sign In
+										</li>
+										<li nz-menu-item>
+											<i nz-icon type="user-add" nzTheme="outline"></i>
+											Sign In
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</nz-header>
+		<nz-content class="content">
+			<router-outlet></router-outlet>
+		</nz-content>
+		<nz-footer class="footer">
+			Angular Demo@Flora
+		</nz-footer>
+	</nz-layout>
+</div>
+
+<app-music-player></app-music-player>

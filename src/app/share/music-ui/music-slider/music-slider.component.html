@@ -1,0 +1,5 @@
+<div class="wy-slider" #wySlider [class.wy-slider-vertical]="wyVertical">
+  <app-music-slider-track [wyVertical]="wyVertical" [wyLength]="bufferOffset" [wyBuffer]="true"></app-music-slider-track>
+  <app-music-slider-track [wyVertical]="wyVertical" [wyLength]="offset"></app-music-slider-track>
+  <app-music-slider-handle [wyVertical]="wyVertical" [wyOffset]="offset"></app-music-slider-handle>
+</div>
